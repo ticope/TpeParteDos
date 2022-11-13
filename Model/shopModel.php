@@ -75,4 +75,16 @@ class shopModel
                 $sentencia->execute(array($id));
             }
         }
-}
+        function getProductsASC(){
+                $sentencia = $this->db->prepare("SELECT * FROM products ORDER BY products.name ASC");
+                $sentencia->execute();
+                $products = $sentencia->fetchAll(PDO::FETCH_OBJ);
+                return $products;        
+        }
+        function getProductsDESC(){
+                $sentencia = $this->db->prepare("SELECT * FROM products order by products.name DESC");
+                $sentencia->execute();
+                $products = $sentencia->fetchAll(PDO::FETCH_OBJ);
+                return $products;  
+        }
+    }
