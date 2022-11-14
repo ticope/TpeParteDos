@@ -8,11 +8,16 @@ Para obtener todos los productos de cierta categoria que esten en oferta: http:/
 
 Para obtener un producto por su ID: http://localhost/tpeParte2/api/product/ID (El ID del producto) Con el metodo GET.
 
-Para crear un producto: http://localhost/tpeParte2/api/product Con el metodo POST.
+Para crear un producto: http://localhost/tpeParte2/api/product Con el metodo POST
+El body que se debe mandar tiene que tener esta estructura:
+{
+    "name": "nombrenuevo",
+    "price": "precionuevo",
+    "id_category": "id de la categoria deseada"
+}
 
 Para eliminar un producto: http://localhost/tpeParte2/api/product/ID (El id del producto que se quiere eliminar) Con el metodo DELETE. 
 
 Para editar un producto: http://localhost/tpeParte2/api/product/ID (El id del producto que se quiere editar) Con el metodo PUT.
-
 
 
